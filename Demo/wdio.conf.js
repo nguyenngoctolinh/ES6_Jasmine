@@ -1,5 +1,22 @@
-var jasmine = require('jasmine');
 var log4js = require('log4js');
+var jasmine = require('jasmine');
+var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
+
+var reporter = new HtmlScreenshotReporter({
+    dest: 'reports/screenshots',
+    filename: 'qas_report.html',
+    ignoreSkippedSpecs: true,
+    captureOnlyFailedSpecs: true,
+    reportOnlyFailedSpecs: false,
+    showSummary: true,
+    showQuickLinks: true,
+    showConfiguration: true,
+    pathBuilder: function (currentSpec, suites, browserCapabilities) {
+        // will return chrome/your-spec-name.png
+        return browserCapabilities.get('browserName') + '/' + currentSpec.fullName;
+    }
+});
+
 log4js.configure({
     appenders: [
         { type: 'console' },
@@ -156,26 +173,24 @@ exports.config = {
     // Gets executed once before all workers get launched.
     // onPrepare: function (config, capabilities) {
     // },
-    onPrepare: function () {
-        // require("jasmine-reporters");
-
-        // // junit reporter
-        // var capsPromise = browser.getCapabilities();
-        // capsPromise.then(function (caps) {
-        //     var browserName = caps.caps_.browserName.toUpperCase();
-        //     var browserVersion = caps.caps_.version;
-        //     var prePendStr = browserName + "-" + browserVersion + "-";
-        //     jasmine.getEnv().addReporter(new
-        //         jasmine.JUnitXmlReporter("test-results", true, true, prePendStr));
-        // });
-
-        var jasmineReporters = require('jasmine-reporters');
-        jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
-            consolidateAll: true,
-            savePath: 'testresults',
-            filePrefix: 'xmloutput'
-        }));
+    // Setup the report before any tests start
+    beforeLaunch: function () {
+        return new Promise(function (resolve) {
+            reporter.beforeLaunch(resolve);
+        });
     },
+
+    // Assign the test reporter to each running instance
+    onPrepare: function () {
+        jasmine.getEnv().addReporter(reporter);
+    },
+
+    // Close the report after all tests finish
+    afterLaunch: function (exitCode) {
+        return new Promise(function (resolve) {
+            reporter.afterLaunch(resolve.bind(this, exitCode));
+        });
+    }
     //
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
