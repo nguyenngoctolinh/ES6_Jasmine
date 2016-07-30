@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/webdriverio/bin/wdio"
   },
   "author": "",
   "license": "ISC",
@@ -14,16 +14,13 @@
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
-    // "jasmine-reporters": "^2.2.0",
-    // "jasmine-spec-reporter": "^2.5.0",
-    // "jasmine2-pit": "^0.2.0",
-    // "karma": "^0.10.10",
-    // "karma-jasmine-html-reporter-livereload": "^1.0.0",
-    "log4js": "^0.6.38",
-    "protractor": "^4.0.0",
-    "protractor-jasmine2-html-reporter": "0.0.6",
+    "jasmine-reporters": "^2.2.0",
+    "jasmine-spec-reporter": "^2.5.0",
+    "jasmine2-pit": "^0.2.0",
     "wdio-dot-reporter": "^0.0.6",
-    "wdio-jasmine-framework": "^0.2.5"
+    "wdio-jasmine-framework": "^0.2.5",
+    "wdio-selenium-standalone-service": "0.0.5",
+    "webdriverio": "^4.2.3"
   },
   "dependencies": {
     "csvtojson": "^1.0.0",
