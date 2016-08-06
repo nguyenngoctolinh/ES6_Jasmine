@@ -15,27 +15,27 @@ http://blog.teamtreehouse.com/install-node-js-npm-windows
 ```
 npm init
 
-```
+```bash
 4. Install WebdriverIO: 
 ```
 npm install webdriverio
 
-```
+```bash
 5. Install Selenium Standalone Service:
 ```
 npm install selenium-standalone –-save-dev
 
-```
+```bash
 6. Use WebdriverIO config:
 ```
 Wdio or wdio config
 
-```
+```bash
 Select:
 - On my local machine
 - Jasmine
 - Shall I install the framework adapter for you? (Y/n): Y
-- Where are your test specs located? (./test/specs/**/*.js): ./GUI/**/*.js
+- Where are your test specs located? (./test/specs/**/*.js): './src/*.js'
 - Press ‘Enter’ to skip this option
 - Press ‘Space bar’to select ‘Selenium-standalone-https …’ --> Press ‘Enter’
 - Shall I install the services for you? (Y/n): Y
@@ -52,11 +52,28 @@ npm install gulp –-save-dev
 ```
 npm install gulp-webdriver –-save-dev 
 
-```
+```bash
 8. Install log4js to create a .log file
 
 ```
 npm install log4js –-save
+
+```
+9. Install Babel to compile from ES6 to Javascript
+```bash
+npm install babel-cli –-save-dev
+
+```
+```bash
+npm install babel-preset-es2015 –-save-dev
+
+```
+Config Babel
+
+```bash
+require('babel-register')({
+  
+});
 
 ```
 # How to run project
@@ -65,6 +82,7 @@ npm install log4js –-save
 npm install or npm i
 
 ```
+
 ```bash
 gulp
 
