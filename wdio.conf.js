@@ -1,3 +1,7 @@
+require('babel-register')({
+  
+});
+
 var log4js = require('log4js');
 log4js.configure({
   appenders: [
@@ -7,16 +11,17 @@ log4js.configure({
 });
 exports.config = {
   specs: [
-    './GUI/**/*.js'
+    './src/*.js'
   ],
   exclude: [
   ],
   maxInstances: 10,
   capabilities: [{
     maxInstances: 5,
-    browserName: 'firefox'
+    // browserName: 'firefox'
+    browserName: 'chrome'
   }],
-  sync: true,
+  sync: false,
   logLevel: 'result',
   coloredLogs: true,
   screenshotPath: './errorShots/',
