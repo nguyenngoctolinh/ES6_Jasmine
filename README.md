@@ -43,6 +43,7 @@ Select:
 - Press ‘Enter’ 
 - What is the base url? (http://localhost): https://www.facebook.com
 - Press ‘Enter’
+
 . Install Gulp plugin and Gulp - Webdriver to run selenium tests with the WebdriverIO testrunner.
 
 ```
