@@ -1,7 +1,3 @@
-require('babel-register')({
-  
-});
-
 var log4js = require('log4js');
 log4js.configure({
   appenders: [
@@ -11,7 +7,7 @@ log4js.configure({
 });
 exports.config = {
   specs: [
-    './src/*.js'
+    './src/specs/login.js'
   ],
   exclude: [
   ],
@@ -21,19 +17,25 @@ exports.config = {
     // browserName: 'firefox'
     browserName: 'chrome'
   }],
-  sync: false,
+  sync: true,
   logLevel: 'result',
   coloredLogs: true,
   screenshotPath: './errorShots/',
-  baseUrl: 'https://www.facebook.com/',
+  baseUrl: 'https://www.gmail.com/',
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   services: ['selenium-standalone'],
   framework: 'jasmine',
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 10000,
+    defaultTimeoutInterval: 500000,
     expectationResultHandler: function (passed, assertion) {
     }
   },
+  //Hook
+  before: function (capabilities, specs) {
+    require("babel-register");
+    require("babel-polyfill");
+
+  }
 }
