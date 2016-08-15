@@ -25,6 +25,7 @@
     "chromedriver": "^2.22.2",
     "gulp": "^3.9.1",
     "log4js": "^0.6.38",
+    "nodemailer": "^2.5.0",
     "selenium-webdriver": "^3.0.0-beta-2",
     "wdio-jasmine-framework": "^0.2.5",
     "webdriverio": "^4.2.5"
@@ -39,6 +40,7 @@
     "browserify": "^13.1.0",
     "eslint": "^3.2.2",
     "gulp-webdriver": "^2.0.2",
+    "wdio-allure-reporter": "^0.1.1",
     "wdio-jasmine-framework": "^0.2.5",
     "wdio-selenium-standalone-service": "0.0.5",
     "wdio-sync": "^0.5.11"

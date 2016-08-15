@@ -1,4 +1,4 @@
-export let valid_data = [{
+export let ValidData = [{
   "val_Username": "es6jasmine@gmail.com",
   "val_Pwd": "es6_jasmine"
 }, {
