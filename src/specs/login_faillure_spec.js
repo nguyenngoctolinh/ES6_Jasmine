@@ -15,7 +15,6 @@ describe('login unsuccessfully', () => {
         browser.end();
     });
 
-
     it('should log in unsuccessfully with invalid password', () => {
 
         const LoginPage = new LoginObjects();
