@@ -1,4 +1,5 @@
 var log4js = require('log4js');
+var AllureReporter = require('jasmine-allure-reporter');
 
 log4js.configure({
   appenders: [
@@ -6,34 +7,9 @@ log4js.configure({
   ],
 });
 
-var smtpConfig = {
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // use SSL
-    auth: {
-        user: 'user@gmail.com',
-        pass: 'pass'
-    }
-};
-
-var poolConfig = {
-    pool: true,
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // use SSL
-    auth: {
-        user: 'user@gmail.com',
-        pass: 'pass'
-    }
-};
-
-var directConfig = {
-    name: 'hostname' // must be the same that can be reverse resolved by DNS for your IP
-};
-
 exports.config = {
   specs: [
-    './src/specs/**/*.spec.js'
+    './src/specs/**/*_spec.js'
   ],
   suites: {
     login: [
@@ -41,39 +17,43 @@ exports.config = {
       './test/specs/login.failure.spec.js'
     ]
   },
-  exclude: [
-  ],
   maxInstances: 10,
   capabilities: [{
     maxInstances: 5,
-    // browserName: 'firefox'
     browserName: 'chrome'
-  },{
-    maxInstances: 5,
-    // browserName: 'firefox'
-    browserName: 'internet explorer'
   }],
   sync: true,
   logLevel: 'result',
   coloredLogs: true,
   screenshotPath: './errorShots/',
-  baseUrl: 'https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier',
-  waitforTimeout: 10000,
+  baseUrl: 'https://www.gmail.com',
+  waitforTimeout: 30000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   services: ['selenium-standalone'],
   framework: 'jasmine',
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 500000,
+    defaultTimeoutInterval: 30000,
     expectationResultHandler: function (passed, assertion) {
+      /**
+        * only take screenshot if assertion failed
+        */
+      if (passed) {
+        return;
+      }
+
+      var title = assertion.message.replace(/\s/g, '-');
+      browser.saveScreenshot(('./error/assertionError_' + title + '.png'));
     }
   },
-  reporters: ['dot', 'allure'],
+
+  reporters: ['allure'],
   reporterOptions: {
     allure: {
       outputDir: 'reports'
     }
   },
+
   //Hook
   before: function (capabilities, specs) {
     require("babel-register");

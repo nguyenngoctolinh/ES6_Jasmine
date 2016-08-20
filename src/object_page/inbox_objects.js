@@ -4,10 +4,16 @@ export class InboxObjects {
 
   }
 
-  get accountImg() { return browser.element('//*[@id="gb"]/div[1]/div[1]/div[2]/div[4]/div[1]/a/span') };
-  get signoutBtn() { return browser.element('//*[@id="gb_71"]') };
-  get otherAccountLnk() { return browser.element('//*[@id="account-chooser-link"]') };
-  get addAccountLnk() { return browser.element('//*[@id="account-chooser-add-account"]') };
-  get h1Lable() { return browser.element('/html/body/div/div[2]/div[1]/h1') };
+  get accountImg() { return this.getElement('//*[@id="gb"]/div[1]/div[1]/div[2]/div[4]/div[1]/a/span') };
+  get addAccountLnk() { return this.getElement('//*[@id="gb"]/div[1]/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/a') };
 
+  getElement(selectorValue) {
+    try {
+      browser.waitForExist(selectorValue)
+    }
+    catch (err) {
+      throw new Error(`selector of ${selectorValue} is not exist. Please check` + err)
+    }
+    return browser.element(selectorValue)
+  }
 }
