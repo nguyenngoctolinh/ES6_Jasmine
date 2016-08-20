@@ -1,4 +1,4 @@
-# ES6 – Jasmine Framework
+# ES6 ï¿½ Jasmine Framework
 ## Preparation
 - Language: ES6
 - Framework: Jasmine
@@ -7,7 +7,7 @@
 - Plugin: Gulp, Log4js
 - Services: Selenium Standalone
 
-# How to build project – Jasmine framework 
+# How to build project ï¿½ Jasmine framework 
 . Install NodeJS: 
 http://blog.teamtreehouse.com/install-node-js-npm-windows
 . Create a new folder 
@@ -23,7 +23,7 @@ npm install webdriverio
 ```
 . Install Selenium Standalone Service:
 ```
-npm install selenium-standalone –-save-dev
+npm install selenium-standalone ï¿½-save-dev
 
 ```
 . Use WebdriverIO config:
@@ -36,37 +36,37 @@ Select:
 - Jasmine
 - Shall I install the framework adapter for you? (Y/n): Y
 - Where are your test specs located? (./test/specs/**/*.js): './src/*.js'
-- Press ‘Enter’ to skip this option
-- Press ‘Space bar’to select ‘Selenium-standalone-https …’ --> Press ‘Enter’
+- Press ï¿½Enterï¿½ to skip this option
+- Press ï¿½Space barï¿½to select ï¿½Selenium-standalone-https ï¿½ï¿½ --> Press ï¿½Enterï¿½
 - Shall I install the services for you? (Y/n): Y
 - Result
-- Press ‘Enter’ 
+- Press ï¿½Enterï¿½ 
 - What is the base url? (http://localhost): https://www.facebook.com
-- Press ‘Enter’
+- Press ï¿½Enterï¿½
 
 . Install Gulp plugin and Gulp - Webdriver to run selenium tests with the WebdriverIO testrunner.
 
 ```
-npm install gulp –-save-dev
+npm install gulp ï¿½-save-dev
 
 ```
 ```
-npm install gulp-webdriver –-save-dev 
+npm install gulp-webdriver ï¿½-save-dev 
 
 ```
 . Install log4js to create a .log file
 
 ```
-npm install log4js –-save
+npm install log4js ï¿½-save
 
 ```
 . Install Babel to compile from ES6 to Javascript
 ```
-npm install babel-cli –-save-dev
+npm install babel-cli ï¿½-save-dev
 
 ```
 ```
-npm install babel-preset-es2015 –-save-dev
+npm install babel-preset-es2015 ï¿½-save-dev
 
 ```
 Config Babel
@@ -88,3 +88,5 @@ npm install or npm i
 gulp
 
 ```
+
+# License: unspecified
