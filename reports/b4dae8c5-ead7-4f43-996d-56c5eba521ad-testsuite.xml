@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1471269600128" stop="1471269617744">
+	<name>login unsuccessfully</name>
+	<title>login unsuccessfully</title>
+	<test-cases>
+		<test-case start="1471269607192" stop="1471269607218" status="passed">
+			<name>Should log in unsuccessfully with invalid acounts</name>
+			<title>Should log in unsuccessfully with invalid acounts</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+				<parameter kind="environment-variable" name="capabilities" value="{&quot;maxInstances&quot;:5,&quot;browserName&quot;:&quot;chrome&quot;}"/>
+				<parameter kind="environment-variable" name="spec files" value="[&quot;d:\\SourceCode\\ES6_Jasmine\\src\\specs\\login_faillure_spec.js&quot;]"/>
+			</parameters>
+			<steps>
+				<step start="1471269617233" stop="1471269617729" status="passed">
+					<name>GET /wd/hub/session/80a15869-9efa-491a-bd8c-3341f76c4ab7/screenshot</name>
+					<title>GET /wd/hub/session/80a15869-9efa-491a-bd8c-3341f76c4ab7/screenshot</title>
+					<attachments>
+						<attachment title="Screenshot" source="6d8806d1-40af-4dec-9acd-d4ff29b23c81-attachment.png" type="image/png" size="32476"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+			</steps>
+			<attachments>
+			</attachments>
+		</test-case>
+	</test-cases>
+</ns2:test-suite>

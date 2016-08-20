@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1471474922925" stop="1471474939597">
+	<name>login successfully</name>
+	<title>login successfully</title>
+	<test-cases>
+		<test-case start="1471474929370" stop="1471474929410" status="broken">
+			<name>should log in successfully with valid account: es6jasmine@gmail.com</name>
+			<title>should log in successfully with valid account: es6jasmine@gmail.com</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+				<parameter kind="environment-variable" name="capabilities" value="{&quot;maxInstances&quot;:5,&quot;browserName&quot;:&quot;chrome&quot;}"/>
+				<parameter kind="environment-variable" name="spec files" value="[&quot;d:\\SourceCode\\ES6_Jasmine\\src\\specs\\login_sucess_spec.js&quot;]"/>
+			</parameters>
+			<steps>
+				<step start="1471474929374" stop="1471474929398" status="passed">
+					<name>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/window_handles</name>
+					<title>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/window_handles</title>
+					<attachments>
+						<attachment title="Response" source="95af1d9c-6825-4274-a5a2-085d5de59073-attachment.json" type="application/json" size="255"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+			</steps>
+			<attachments>
+			</attachments>
+			<failure>
+				<message>Failed: windowHandles.length is not a function</message>
+				<stack-trace>TypeError: windowHandles.length is not a function
+    at Object.&lt;anonymous&gt; (login_sucess_spec.js:24:44)
+    at D:\SourceCode\ES6_Jasmine\node_modules\wdio-jasmine-framework\node_modules\wdio-sync\build\index.js:642:26
+    at Object.executeSync (D:\SourceCode\ES6_Jasmine\node_modules\wdio-jasmine-framework\node_modules\wdio-sync\build\index.js:640:12)
+    at D:\SourceCode\ES6_Jasmine\node_modules\wdio-jasmine-framework\node_modules\wdio-sync\build\index.js:877:34</stack-trace>
+			</failure>
+		</test-case>
+		<test-case start="1471474929410" stop="1471474929493" status="broken">
+			<name>should log in successfully with valid account: techconsept2016@gmail.com</name>
+			<title>should log in successfully with valid account: techconsept2016@gmail.com</title>
+			<description></description>
+			<labels>
+			</labels>
+			<parameters>
+				<parameter kind="environment-variable" name="capabilities" value="{&quot;maxInstances&quot;:5,&quot;browserName&quot;:&quot;chrome&quot;}"/>
+				<parameter kind="environment-variable" name="spec files" value="[&quot;d:\\SourceCode\\ES6_Jasmine\\src\\specs\\login_sucess_spec.js&quot;]"/>
+			</parameters>
+			<steps>
+				<step start="1471474929412" stop="1471474929493" status="broken">
+					<name>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/window_handles</name>
+					<title>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/window_handles</title>
+					<attachments>
+					</attachments>
+					<steps>
+						<step start="1471474929413" stop="1471474929492" status="passed">
+							<name>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/screenshot</name>
+							<title>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/screenshot</title>
+							<attachments>
+								<attachment title="Response" source="42cf4db7-df3b-40b8-9d63-228da68b74ce-attachment.json" type="application/json" size="255"/>
+							</attachments>
+							<steps>
+							</steps>
+						</step>
+					</steps>
+				</step>
+				<step start="1471474929493" stop="1471474929704" status="passed">
+					<name>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/screenshot</name>
+					<title>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/screenshot</title>
+					<attachments>
+						<attachment title="Screenshot" source="c83b567c-0d65-4bf9-860a-c74f39631a82-attachment.png" type="image/png" size="32511"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+				<step start="1471474939453" stop="1471474939590" status="passed">
+					<name>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/screenshot</name>
+					<title>GET /wd/hub/session/1f66bb74-7f42-45ee-b466-4807dc1c0043/screenshot</title>
+					<attachments>
+						<attachment title="Screenshot" source="2d339857-c553-4d56-ae2e-20a2a7e14f2d-attachment.png" type="image/png" size="32476"/>
+					</attachments>
+					<steps>
+					</steps>
+				</step>
+			</steps>
+			<attachments>
+				<attachment title="Screenshot" source="0975b3cf-020f-4dd1-8dde-1e67c41e3265-attachment.png" type="image/png" size="32511"/>
+			</attachments>
+			<failure>
+				<message>Failed: windowHandles.length is not a function</message>
+				<stack-trace>TypeError: windowHandles.length is not a function
+    at Object.&lt;anonymous&gt; (login_sucess_spec.js:24:44)
+    at D:\SourceCode\ES6_Jasmine\node_modules\wdio-jasmine-framework\node_modules\wdio-sync\build\index.js:642:26
+    at Object.executeSync (D:\SourceCode\ES6_Jasmine\node_modules\wdio-jasmine-framework\node_modules\wdio-sync\build\index.js:640:12)
+    at D:\SourceCode\ES6_Jasmine\node_modules\wdio-jasmine-framework\node_modules\wdio-sync\build\index.js:877:34</stack-trace>
+			</failure>
+		</test-case>
+	</test-cases>
+</ns2:test-suite>
