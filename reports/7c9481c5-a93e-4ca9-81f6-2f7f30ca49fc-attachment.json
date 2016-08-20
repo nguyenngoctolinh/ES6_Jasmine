@@ -1,8 +1,0 @@
-{
-    "state": "success",
-    "sessionId": "204568c0-e2fb-4f7b-baf1-95551fbdb1ee",
-    "hCode": 83426679,
-    "value": "The email and password you entered don't match.",
-    "class": "org.openqa.selenium.remote.Response",
-    "status": 0
-}
