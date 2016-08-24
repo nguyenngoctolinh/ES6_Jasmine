@@ -3,7 +3,7 @@ import { InboxObjects } from '../object_page/inbox_objects'
 import { ValidData } from '../data/login_valid_data'
 import { Logger } from '../../log.conf'
 
-xdescribe('login successfully', () => {
+describe('login successfully', () => {
 
   beforeAll(() => {
     browser.url('/');

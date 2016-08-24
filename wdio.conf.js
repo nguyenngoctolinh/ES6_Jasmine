@@ -1,5 +1,4 @@
 var log4js = require('log4js');
-var AllureReporter = require('jasmine-allure-reporter');
 
 log4js.configure({
   appenders: [
@@ -13,8 +12,8 @@ exports.config = {
   ],
   suites: {
     login: [
-      './test/specs/login.success.spec.js',
-      './test/specs/login.failure.spec.js'
+      './src/specs/login_success_spec.js',
+      './src/specs/login_failure_spec.js'
     ]
   },
   maxInstances: 10,
@@ -33,7 +32,7 @@ exports.config = {
   services: ['selenium-standalone'],
   framework: 'jasmine',
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000,
+    defaultTimeoutInterval: 50000,
     expectationResultHandler: function (passed, assertion) {
       /**
         * only take screenshot if assertion failed
