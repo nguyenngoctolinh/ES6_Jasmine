@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var webdriver = require('gulp-webdriver');
 var shell = require('gulp-shell');
 
-gulp.task('test', () => {
+gulp.task('default', () => {
   return gulp.src('wdio.conf.js').pipe(webdriver());
 });
 
@@ -23,4 +23,4 @@ gulp.task('sendmail', () => {
 
 });
 
-gulp.task('default', ['test', 'report']);
+
