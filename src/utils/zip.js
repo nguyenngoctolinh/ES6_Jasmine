@@ -1,7 +1,7 @@
 var file_system = require('fs');
 var archiver = require('archiver');
 
-var output = file_system.createWriteStream('logs.zip');
+var output = file_system.createWriteStream('reports.zip');
 var archive = archiver('zip');
 
 output.on('close', function () {
