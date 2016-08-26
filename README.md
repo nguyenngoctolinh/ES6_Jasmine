@@ -8,9 +8,12 @@
 - Services: Selenium Standalone
 
 # How to build project – Jasmine framework 
+
 1. Install NodeJS: 
 http://blog.teamtreehouse.com/install-node-js-npm-windows
+
 2. Create a new folder 
+
 3. Open Command prompt from this folder: 
 
 ```
@@ -69,6 +72,8 @@ npm install gulp-webdriver –-save-dev
 
 8. Create a gulp file with the configuration:
 
+```
+
 var gulp = require('gulp');
 var webdriver = require('gulp-webdriver');
 var shell = require('gulp-shell');
@@ -93,6 +98,8 @@ gulp.task('sendmail', () => {
     ]));
 
 });
+
+```
 
 
 9. Install log4js to create a .log file
