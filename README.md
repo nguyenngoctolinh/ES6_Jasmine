@@ -4,38 +4,38 @@
 - Framework: Jasmine
 - Tool: Visual Studio Code
 - Web driver: WebdriverIO
-- Plugin: Gulp, Log4js
+- Plugin: Gulp, Log4js, nodemailer, zipjs, babel
 - Services: Selenium Standalone
 
 # How to build project – Jasmine framework 
 
-1. Install NodeJS: 
+-  Install NodeJS: 
 http://blog.teamtreehouse.com/install-node-js-npm-windows
 
-2. Create a new folder 
+- Create a new folder 
 
-3. Open Command prompt from this folder: 
+-  Open Command prompt from this folder: 
 
 ```
 npm init
 
 ```
 
-4. Install WebdriverIO: 
+-  Install WebdriverIO: 
 
 ```
 npm install webdriverio
 
 ```
 
-5. Install Selenium Standalone Service:
+-  Install Selenium Standalone Service:
 
 ```
 npm install selenium-standalone –-save-dev
 
 ```
 
-6. Use WebdriverIO config:
+-  Use WebdriverIO config:
 
 ```
 wdio or wdio config
@@ -55,7 +55,7 @@ Select:
 - What is the base url? (http://localhost): https://www.facebook.com
 - Press ‘Enter’
 
-7. Install Gulp plugin and Gulp - Webdriver to run selenium tests with the WebdriverIO testrunner.
+-  Install Gulp plugin and Gulp - Webdriver to run selenium tests with the WebdriverIO testrunner.
 
 
 ```
@@ -70,7 +70,7 @@ npm install gulp-webdriver –-save-dev
 
 ```
 
-8. Create a gulp file with the configuration:
+-  Create a gulp file with the configuration:
 
 ```
 
@@ -102,7 +102,7 @@ gulp.task('sendmail', () => {
 ```
 
 
-9. Install log4js to create a .log file
+-  Install log4js to create a .log file
 
 
 ```
@@ -110,7 +110,7 @@ npm install log4js –-save
 
 ```
 
-10. Install Babel to compile from ES6 to Javascript
+-  Install Babel to compile from ES6 to Javascript
 
 ```
 npm install babel-cli –-save-dev
@@ -168,7 +168,7 @@ This will generate a report (by default in ./allure-report), and open it in the 
 
 # How to send email 
 
-1. Install the nodemailer package
+-  Install the nodemailer package
 
 ```
 
@@ -176,7 +176,7 @@ npm install nodemailer --save
 
 ```
 
-2. Create a transport object
+-  Create a transport object
 
 ```
 let transporter = nodemailer.createTransport('smtps://[username]%40gmail.com:[password]@smtp.gmail.com');
@@ -184,7 +184,7 @@ let transporter = nodemailer.createTransport('smtps://[username]%40gmail.com:[pa
 ```
 
 
-3. Email configuration
+-  Email configuration
 
 ```
 
@@ -208,7 +208,7 @@ attachments: [
 
 ```
 
-4. Send mail
+-  Send mail
 
 ```
 transporter.sendMail(mailOptions, (error, info) => {
