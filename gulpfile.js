@@ -13,7 +13,6 @@ gulp.task('reportSM', () => {
       'node ./src/utils/zip.js',
       'node ./src/utils/send_mail.js',
       'allure report open -p 8080'
-
     ]));
 });
 
