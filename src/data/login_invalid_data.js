@@ -1,7 +1,7 @@
-export let InvalidData = [{
-  "inval_Username": "es6jasmine@gmail.com",
-  "inval_Pwd": "@dmin123"
+export let notRegisteredAccounts = [{
+  "username": "es6jasmine@gmail.com",
+  "pwd": "@dmin123"
 }, {
-    "inval_Username": "fdgfhbf@gmail.com",
-    "inval_Pwd": "@Dmin123"
+    "username": "fdgfhbf@gmail.com",
+    "pwd": "@Dmin123"
   }];

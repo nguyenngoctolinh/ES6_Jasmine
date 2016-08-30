@@ -1,7 +1,8 @@
 import { LoginObjects } from '../object_page/login_objects'
 import { InboxObjects } from '../object_page/inbox_objects'
-import { ValidData } from '../data/login_valid_data'
-import { Logger } from '../../log.conf'
+import { registeredAccounts } from '../data/login_valid_data'
+import { logger } from '../../log.conf'
+
 
 describe('login successfully', () => {
 
@@ -15,22 +16,22 @@ describe('login successfully', () => {
     browser.end();
   });
 
-  for (let index = 0; index < ValidData.length; index++) {
-    it(`should log in successfully with valid account: ${ValidData[index].val_Username}`, () => {
+  for (let index = 0; index < registeredAccounts.length; index++) {
+    it(`should log in successfully with valid account: ${registeredAccounts[index].username}`, () => {
 
       const LoginPage = new LoginObjects();
       const InboxPage = new InboxObjects();
 
 
-      LoginPage.emailTxt.setValue(ValidData[index].val_Username);
+      LoginPage.emailTxt.setValue(registeredAccounts[index].username);
       LoginPage.nextBtn.click();
-      LoginPage.pwdTxt.setValue(ValidData[index].val_Pwd);
+      LoginPage.pwdTxt.setValue(registeredAccounts[index].pwd);
       LoginPage.signInBtn.click();
 
       InboxPage.accountImg.waitForVisible();
-      expect(browser.getTitle()).toBe(`Inbox - ${ValidData[index].val_Username} - Gmail`);
-      console.log(`Log in Successfully with the valid account: ${ValidData[index].val_Username}`);
-      Logger.info(`Log in Successfully with the valid account: ${ValidData[index].val_Username}`);
+      expect(browser.getTitle()).toBe(`Inbox - ${registeredAccounts[index].username} - Gmail`);
+      console.log(`Log in Successfully with the valid account: ${registeredAccounts[index].username}`);
+      logger.info(`Log in Successfully with the valid account: ${registeredAccounts[index].username}`);
 
       InboxPage.accountImg.click();
       InboxPage.addAccountLnk.click();

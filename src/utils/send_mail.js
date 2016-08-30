@@ -1,8 +1,6 @@
-// "use strict"
 var nodemailer = require("nodemailer");
 
 let transporter = nodemailer.createTransport('smtps://es6jasmine%40gmail.com:es6_jasmine@smtp.gmail.com');
-
 let mailOptions = {
   from: '"ES6 Jasmine 👥" <es6jasmine@gmail.com>',
   to: '"Techcon 2016 👥" <techconsept2016@gmail.com>',
@@ -14,13 +12,12 @@ let mailOptions = {
    ES6 & Jasmine</p>`,
 
     attachments: [
-      {   // file on disk as an attachment
+      {
         filename: 'reports.zip',
-        path: './reports.zip' // stream this file
+        path: './reports.zip'
       }
     ]
 };
-
 transporter.sendMail(mailOptions, (error, info) => {
   if (error) {
     return console.log(error);

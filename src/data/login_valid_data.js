@@ -1,7 +1,7 @@
-export let ValidData = [{
-  "val_Username": "es6jasmine@gmail.com",
-  "val_Pwd": "es6_jasmine"
+export let registeredAccounts = [{
+  "username": "es6jasmine@gmail.com",
+  "pwd": "es6_jasmine"
 }, {
-    "val_Username": "techconsept2016@gmail.com",
-    "val_Pwd": "techcon_2016"
+    "username": "techconsept2016@gmail.com",
+    "pwd": "techcon_2016"
   }];

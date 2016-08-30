@@ -10,7 +10,7 @@ gulp.task('report', () => {
   return gulp.src('wdio.conf.js')
     .pipe(shell([
       'allure generate reports',
-      'allure report open'
+      'allure report open -p 8080'
     ]));
 });
 
