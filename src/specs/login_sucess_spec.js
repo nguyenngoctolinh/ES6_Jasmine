@@ -1,10 +1,11 @@
+import validLoginData from '../data/login_valid_data.json'
 import { LoginObjects } from '../object_page/login_objects'
 import { InboxObjects } from '../object_page/inbox_objects'
-import { registeredAccounts } from '../data/login_valid_data'
 import { logger } from '../../log.conf'
 
-
 describe('login successfully', () => {
+
+  let registeredAccounts = JSON.parse(JSON.stringify(validLoginData.validData));
 
   beforeAll(() => {
     browser.url('/');
@@ -17,6 +18,7 @@ describe('login successfully', () => {
   });
 
   for (let index = 0; index < registeredAccounts.length; index++) {
+
     it(`should log in successfully with valid account: ${registeredAccounts[index].username}`, () => {
 
       const LoginPage = new LoginObjects();
@@ -37,9 +39,7 @@ describe('login successfully', () => {
       InboxPage.addAccountLnk.click();
 
       let arrWindows = browser.windowHandles();
-      for (let i = 1; i < arrWindows.value.length; i++){
-        browser.switchTab(arrWindows.value[i]);
-      }
+      browser.switchTab(arrWindows.value[1]);
 
     });
   }

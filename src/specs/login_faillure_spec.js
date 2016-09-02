@@ -1,9 +1,11 @@
-import { notRegisteredAccounts } from '../data/login_invalid_data'
+import invalidLoginData from '../data/login_invalid_data.json'
 import { LoginObjects } from '../object_page/login_objects'
 import { InboxObjects } from '../object_page/inbox_objects'
 import { logger } from '../../log.conf'
 
-xdescribe('login unsuccessfully', () => {
+describe('login unsuccessfully', () => {
+
+    let notRegisteredAccounts = JSON.parse(JSON.stringify(invalidLoginData.invalidData));
 
     beforeAll(() => {
         browser.url('/');
