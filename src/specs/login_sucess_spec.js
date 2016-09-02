@@ -36,11 +36,10 @@ describe('login successfully', () => {
       InboxPage.accountImg.click();
       InboxPage.addAccountLnk.click();
 
-      // for (let i = 0; i < arrWindows.length; i++){
-      //   browser.switchTab(arrWindows.value[++i]);
-      // }
       let arrWindows = browser.windowHandles();
-      browser.switchTab(arrWindows.value[1]);
+      for (let i = 1; i < arrWindows.value.length; i++){
+        browser.switchTab(arrWindows.value[i]);
+      }
 
     });
   }

@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/nguyenngoctolinh/ES6_Jasmine#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "3.9.0",
     "log4js": "^0.6.38",
     "nodemailer": "^2.5.0",
     "wdio-allure-reporter": "^0.1.1",
