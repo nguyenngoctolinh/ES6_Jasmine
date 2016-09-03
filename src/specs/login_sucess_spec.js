@@ -1,11 +1,9 @@
-import validLoginData from '../data/login_valid_data.json'
+import jSonArr  from '../data/login_valid_data.json'
 import { LoginObjects } from '../object_page/login_objects'
 import { InboxObjects } from '../object_page/inbox_objects'
 import { logger } from '../../log.conf'
 
 describe('login successfully', () => {
-
-  let registeredAccounts = JSON.parse(JSON.stringify(validLoginData.validData));
 
   beforeAll(() => {
     browser.url('/');
@@ -16,6 +14,8 @@ describe('login successfully', () => {
     browser.pause(10000);
     browser.end();
   });
+
+  let registeredAccounts = JSON.parse(JSON.stringify(jSonArr.validData));
 
   for (let index = 0; index < registeredAccounts.length; index++) {
 

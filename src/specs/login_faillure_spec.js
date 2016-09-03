@@ -1,11 +1,9 @@
-import invalidLoginData from '../data/login_invalid_data.json'
+import jSonArr from '../data/login_invalid_data.json'
 import { LoginObjects } from '../object_page/login_objects'
 import { InboxObjects } from '../object_page/inbox_objects'
 import { logger } from '../../log.conf'
 
 describe('login unsuccessfully', () => {
-
-    let notRegisteredAccounts = JSON.parse(JSON.stringify(invalidLoginData.invalidData));
 
     beforeAll(() => {
         browser.url('/');
@@ -17,6 +15,8 @@ describe('login unsuccessfully', () => {
         browser.end();
     });
 
+    let notRegisteredAccounts = JSON.parse(JSON.stringify(jSonArr.invalidData));
+    
     it('should log in unsuccessfully with invalid password', () => {
 
         const LoginPage = new LoginObjects();

@@ -16,7 +16,7 @@ archive.pipe(output);
 archive.bulk([
     {
         expand: true,
-        cwd: 'reports', //folder which you want to zip
+        cwd: 'reports',
         src: ["**/*"],
         dest: ''
     }

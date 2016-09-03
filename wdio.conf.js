@@ -33,17 +33,6 @@ exports.config = {
   framework: 'jasmine',
   jasmineNodeOpts: {
     defaultTimeoutInterval: 50000,
-    expectationResultHandler: function (passed, assertion) {
-      /**
-        * only take screenshot if assertion failed
-        */
-      if (passed) {
-        return;
-      }
-
-      var title = assertion.message.replace(/\s/g, '-');
-      browser.saveScreenshot(('./error/assertionError_' + title + '.png'));
-    }
   },
 
   reporters: ['allure'],
