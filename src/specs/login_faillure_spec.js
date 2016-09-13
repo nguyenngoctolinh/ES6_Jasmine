@@ -16,7 +16,7 @@ describe('login unsuccessfully', () => {
     });
 
     let notRegisteredAccounts = JSON.parse(JSON.stringify(jSonArr.invalidData));
-    
+
     it('should log in unsuccessfully with invalid password', () => {
 
         const LoginPage = new LoginObjects();
@@ -26,7 +26,7 @@ describe('login unsuccessfully', () => {
         LoginPage.signInBtn.click();
 
         let contentErrMsgPwd = LoginPage.errorMsgPwd.getText();
-        expect(contentErrMsgPwd).toBe("The email and password you entered don't match.");
+        expect(contentErrMsgPwd).toBe("Wrong password. Try again.");
         console.log(`Log in unsuccessfully with the password: ${notRegisteredAccounts[0].pwd}`);
         logger.info(`Log in unsuccessfully with the password: ${notRegisteredAccounts[0].pwd}`);
 

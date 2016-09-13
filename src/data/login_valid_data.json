@@ -2,11 +2,11 @@
     "validData": [
         {
             "username": "es6jasmine@gmail.com",
-            "pwd": "es6_jasmine"
+            "pwd": "es6_jasmine_123"
         },
         {
             "username": "techconsept2016@gmail.com",
-            "pwd": "techcon_2016"
+            "pwd": "techcon_2016_123"
         }
     ]
 }
